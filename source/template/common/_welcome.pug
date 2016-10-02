@@ -1,0 +1,55 @@
+include _mixins
+.wrapper.welcome_page
+	header.header
+		button.btn.btn-autorization Авторизоваться
+	.flip__container
+		section.card.card_front
+			.author-block
+				div.author__photo-frame
+					img.author__photo(src="assets/img/img_author.jpg", alt="")
+				h1.author__name Коцарев Александр
+				p.author__info Front-End разработчик
+				+socialsWelcome('social', [['vk', 'https://vk.com', 'Вконтакте'], ['github-alt', 'https://github.com/wellapex/portfolio', 'Git'], ['linkedin', 'https://www.linkedin.com/', 'LinkedIn']])
+			+cardButtons('nav', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html'})
+		section.card.card_back
+			.card__authorization
+				h2.authorization__title-h2 Авторизуйтесь
+				form.card__form
+					
+					.form__row
+						label.label__input.label__login(for="input__login")
+							svg.svg__login(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+								use.svg__icon(xlink:href= "assets/img/sprite.svg#login")
+						input.input__text.input__login(type="text" placeholder="Логин" id="input__login")
+					
+					.form__row
+						label.label__input.label__pass(for="input__pass")
+							svg.svg__pass(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+								use.svg__icon(xlink:href= "assets/img/sprite.svg#password")
+						input.input__text.input__pass(type="text" placeholder="Пароль" id="input__pass")
+					
+					.form__row
+						input.input__checkbox(type="checkbox" id="checkbox__man") 
+						label.checkbox__label(for="checkbox__man") 
+							.checkbox__custom
+								svg.svg__checkbox(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+									use.svg__icon(xlink:href= "assets/img/sprite.svg#check")
+							span.span__checkbox Я человек
+					
+					.form__row
+						span.input__question Вы точно не робот?
+					
+					.form__row
+						input.input__radio(type="radio" id="radio__yes" name="answer__robot") 
+						label.radio__label(for="radio__yes") 
+							.radio__custom
+							span.span__radio Да
+						input.input__radio(type="radio" id="radio__no" name="answer__robot" checked) 
+						label.radio__label(for="radio__no") 
+							.radio__custom
+							span.span__radio Не уверен
+			.card__buttons
+				button.btn__authorization.btn_back На главную
+				button.btn__authorization.btn_submit Войти
+
+	footer.footer_copyright © Александр Коцарев | создано с любовью в LoftSchool | 2016

@@ -1,0 +1,63 @@
+extends ../layout
+include ../common/_about-me
+
+block aboutMe
+	section.section__about-me
+		.section__left
+			.section__title
+				h2.h2__title Обо мне
+				.substrate
+			.section__photo
+				.about-me__photo-frame
+					img.about-me__photo(src="assets/img/img1.jpg", alt="")
+			.about-me
+				h3.h3__title Кто я
+				p.p__text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+				p.p__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+		.section__right
+			h3.h3__title Чем я могу быть вам полезен
+			p.p__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+			.skils-info
+				ul.right-side__diagrams
+					li.diagram__title.frontend
+						h4.title__skill Frontend
+						ul.diagram__list
+							li.diagram__item
+								input.dial(type="text" value="90")
+								.skill__name HTML5
+							li.diagram__item
+								input.dial(type="text" value="75")
+								.skill__name CSS3
+							li.diagram__item
+								input.dial(type="text" value="65")
+								.skill__name JavaScript & jQuery
+							li.diagram__item
+								input.dial(type="text" value="65")
+								.skill__name React
+					li.diagram__title.backend 
+						h4.title__skill Backend
+						ul.diagram__list.disable
+							li.diagram__item
+								input.dial(type="text" value="5")
+								.skill__name PHP
+							li.diagram__item
+								input.dial(type="text" value="0")
+								.skill__name mySQL
+							li.diagram__item
+								input.dial(type="text" value="15")
+								.skill__name Node.js & npm
+							li.diagram__item
+								input.dial(type="text" value="0")
+								.skill__name Mongo.db
+					li.diagram__title.workflow 
+						h4.title__skill WorkFlow
+						ul.diagram__list
+							li.diagram__item
+								input.dial(type="text" value="85")
+								.skill__name Git
+							li.diagram__item
+								input.dial(type="text" value="95")
+								.skill__name Gulp
+							li.diagram__item
+								input.dial(type="text" value="100")
+								.skill__name Bower

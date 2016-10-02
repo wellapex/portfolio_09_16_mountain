@@ -1,0 +1,39 @@
+include common/_mixins
+
+.wrapper.wrapper_layout
+	header.header.header_about
+		+socialsWelcome('social', [['vk', 'https://vk.com', 'Вконтакте'], ['github-alt', 'https://github.com/wellapex/portfolio', 'Git'], ['linkedin', 'https://www.linkedin.com/', 'LinkedIn']], 'header')
+		.hamburger-menu
+			span.hamburger.hamburger_up
+			span.hamburger.hamburger_middle
+			span.hamburger.hamburger_down
+	
+	section.section_author
+		div.author__photo-frame.author__photo-frame_layout
+			img.author__photo(src="assets/img/img_author.jpg", alt="")
+		block namePage
+			h1.author__name.author__name_color_wihte Коцарев Александр
+			p.author__info.author__info_color_white Front-End разработчик		
+
+	section.section_tringls
+		a.tringl__link(href="#")
+			svg.svg__tringl(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+				use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_down")
+		.down__tringles
+			svg.svg__tringls(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
+				polygon(class="left__side_footer" points="0,0 0,86 500.8,86 500.8,75.5")
+				polygon(class="right__side_footer" points="1000,0 1000,86 500,86 500,75.5")
+
+block aboutMe
+block works
+block map
+block reviews
+
+footer.footer
+	.side-up.container
+		+cardButtons('nav_footer', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html', 'Авторизация' : 'auth.html'})
+		+socialsWelcome('social', [['vk', 'https://vk.com', 'Вконтакте'], ['github-alt', 'https://github.com/wellapex/portfolio', 'Git'], ['linkedin', 'https://www.linkedin.com/', 'LinkedIn']], 'footer')
+	.side-down.container
+		p.side-down__p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+		p.side-down__copyright © Александр Коцарев | создано с любовью в LoftSchool | 2016
+

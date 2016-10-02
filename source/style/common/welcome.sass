@@ -1,0 +1,367 @@
+.wrapper
+	background: url('../img/bg.jpg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 100vh
+.welcome_page	
+	display: flex
+	flex-flow: column
+	justify-content: center
+	align-items: center
+
+
+// Header
+.header
+	flex: 0 0 auto
+	margin-left: auto
+
+.btn
+	background-color: inherit
+	border: 1px solid #fff
+	margin: 30px 20px
+	padding: 0px 20px
+	border-radius: 5px
+	cursor: pointer
+	// font-family: roboto-regular
+	&:focus
+		outline: none
+	&:hover
+		background-color: #fff
+		color: #00bfa5
+
+.btn-autorization
+	color: #fff
+	font-size: 17px
+	font-weight: 500
+	padding: 12px 26px
+
+.flip__container
+	margin: auto
+	min-width: 380px
+	min-height: 450px
+	position: relative
+	perspective: 1000
+
+.card_front, .card_back
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	backface-visibility: hidden
+	transition: transform 0.7s
+	
+.card_back
+	transform: rotateY(-180deg)
+
+.flip__container.flipped .card_front
+		transform: rotateY(180deg)
+.flip__container.flipped .card_back
+		transform: rotateY(0deg)
+
+// Card author
+.card
+	margin: auto
+	min-width: 380px
+	border-radius: 5px 5px 0 0
+	text-align: center
+	overflow: hidden
+	display: flex
+	flex-flow: column
+
+
+.author-block
+	padding-top: 30px
+	background-color: rgba(#fff, .85)
+	display: flex
+	flex-flow: column
+	justify-content: center
+	align-items: center
+	
+.author__photo-frame
+	width: 150px
+	height: 150px
+	border-radius: 50%
+	overflow: hidden
+
+.author__photo
+	width: 100%
+	height: auto
+
+.author__name
+	// padding: 0px 0px
+	margin: 0
+	margin-top: 15px
+	color: #455a64
+	// font-family: Roboto
+	font-size: 28px
+	font-weight: 500
+	line-height: 34px
+
+.author__info
+	margin: 5px
+	color: #455a64
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 400
+	line-height: 24px
+
+.social
+	margin: auto
+	padding-top: 20px
+	padding-bottom: 38px
+
+.social__list
+	list-style: none
+	margin: 0
+	padding: 0
+	display: flex
+
+.social__item
+	margin: 0
+	padding: 0
+	// padding-left: 28px
+	padding: 0 14px
+	&:hover > .social__link
+		opacity: 1
+
+.social__link
+	text-decoration: none
+	color: #00bfa5
+	opacity: .5
+	font-size: 30px
+
+.social__name
+	position: absolute
+	top: -999px
+	left: -999px
+	right: -999px
+	z-index: -999
+
+.nav
+	width: 100%
+	border-radius: 0 0 5px 5px
+	overflow: hidden
+
+.nav__list
+	list-style: none
+	margin: 0
+	padding: 0
+	display: flex
+
+.nav__item
+	background-color: rgba(#00bfa5, 1)
+	width: 100%
+	text-align: center
+	border-right: 2px solid rgba(#dee3e7, .5)
+	&:first-child
+		flex: 3
+	&:nth-child(2)
+		flex: 2.5 
+	&:last-child
+		flex: 2 
+		border-right: none
+	&:hover > .nav__link
+		background-color: #009688
+
+.nav__link
+	text-decoration: none
+	color: #fff
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 500
+	padding: 14px 0
+	display: block
+
+// Card authorization
+	
+
+.card__authorization
+
+
+.authorization__title-h2
+	color: #455a64
+	// font-family: BERNIERRegular
+	font-size: 35px
+	font-weight: 400
+	line-height: 41px
+	text-transform: uppercase
+	margin: 0
+	margin-top: 5px
+	margin-bottom: 22px
+
+.card__form
+	display: flex
+	flex-flow: column
+
+.form__row
+	display: flex
+	margin: 10px 20px
+	justify-content: center
+	&:nth-child(4)
+		margin-top: 0
+		margin-bottom: 0
+	&:nth-child(5)
+		margin-top: 5px
+
+.label__input
+	flex: 0 1 45px
+	width: 45px
+	height: 45px
+	background-color: #f0efe9
+	display: flex
+	border-radius: 5px 0px 0px 5px
+
+.label__login
+
+.svg__login
+	width: 20px
+	margin: auto
+	fill: #c4cbcd
+
+.input__text
+	flex: 2 0 auto
+	border: none
+	padding-left: 20px
+	border-radius: 0 5px 5px 0
+	color: #373e42
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 400
+	&:focus
+		outline: none
+
+.input__login
+
+.label__pass
+
+.svg__pass
+	width: 20px
+	margin: auto
+	fill: #c4cbcd
+
+.input__pass
+	
+/* Checkbox style */
+.input__checkbox
+	display: none
+	&:checked+.checkbox__label
+		.checkbox__custom
+			.svg__checkbox
+				opacity: 1
+		
+
+.checkbox__label
+	// display: inline-block
+	color: #fff
+	box-sizing: border-box
+	display: flex
+
+.checkbox__custom
+	width: 21px
+	height: 20px
+	background-color: #00bfa5
+	border-radius: 2px
+	box-sizing: margin-box
+	cursor: pointer
+
+.svg__checkbox
+	cursor: pointer
+	fill: #fff
+	height: 15px
+	width: 15px
+	opacity: 0
+
+.span__checkbox
+	color: #455a64
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 400
+	line-height: 24px
+	padding-left: 9px
+
+.input__question
+	color: #455a64
+	// font-family: Roboto
+	font-size: 14px
+	font-weight: 700
+	line-height: 24px
+
+.input__radio 
+	display: none
+	&:checked+.radio__label 
+		.radio__custom:after
+			opacity: 1
+		
+
+.radio__label
+	display: flex
+	margin-right: 20px
+	&:last-child
+		// margin-right: 0px
+		// margin-left: 5px
+
+.radio__custom
+	cursor: pointer
+	width: 20px
+	height: 20px
+	background-color: #fff
+	border-radius: 50%
+	margin-right: 9px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background-color: #00bfa5
+		opacity: 0
+
+.span__radio
+	color: #455a64
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 400
+	line-height: 24px
+
+.card__buttons
+	display: flex
+
+.btn__authorization
+	cursor: pointer
+	flex: 1 0 50%
+	border: none
+	background-color: #00bfa5
+	color: #fff
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 500
+	line-height: 36px
+	border-right: 2px solid #dee3e7
+	&:last-child
+		border-right: none
+	&:hover
+		background-color: #009688
+
+.btn_back
+	
+
+.btn_submit
+	
+
+
+
+/* Footer style */
+.footer_copyright
+	flex: 0 0 auto
+	color: #fff
+	// font-family: Roboto
+	font-size: 16px
+	font-weight: 300
+	margin-bottom: 20px
